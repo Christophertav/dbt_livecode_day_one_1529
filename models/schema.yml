@@ -1,0 +1,21 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw_data_circle
+    tables:
+      - name: parcel
+        identifier: raw_cc_parcel
+        tests:
+          - unique:
+              column_name: Parcel_id
+          - not_null:
+              column_name: Parcel_id
+        description: suivi global des livraisons (dates)
+      - name: parcel_product
+        identifier: raw_cc_parcel_product
+        tests:
+          - unique:
+              column_name: (ParCEL_id || '-' || Model_mAME)
+          - not_null:
+              column_name: (ParCEL_id || '-' || Model_mAME)
+        description: suivi du contenu des colis

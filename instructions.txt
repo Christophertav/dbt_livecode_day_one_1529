@@ -15,4 +15,4 @@
     month_purchase,
     quantity,
     nb_models (nbr de model_name)
-6. Mettre à jour le schéma
+6. Mettre à jour le schema.yml
